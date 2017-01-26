@@ -80,7 +80,9 @@
           // wait for animation to complete and then hide the backdrop
           _this.animateBackdrop = false;
           this._modalAnimation = setTimeout(() => {
-            _this._body.classList.remove('modal-open');
+            if (_this._body.classList.contains('modal-open')) {
+              _this._body.classList.remove('modal-open');
+            }
             // no hide the modal wrapper
             _this.$el.style.display = 'none';
             _this.$root.$emit('hidden::modal')

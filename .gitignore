@@ -5,3 +5,5 @@ node_modules/
 *.iml
 .idea
 .nuxt
+.DS_Store
+._*
